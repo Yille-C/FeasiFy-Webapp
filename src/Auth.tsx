@@ -20,13 +20,7 @@ const Auth: React.FC = () => {
 
   const navigate = useNavigate();
 
-  const activePassword = isLogin ? loginForm.password : registerForm.password;
-  const passwordChecks = {
-    length: activePassword.length >= 8 && activePassword.length <= 20,
-    upper: /[A-Z]/.test(activePassword),
-    lower: /[a-z]/.test(activePassword),
-    number: /\d/.test(activePassword),
-  };
+
 
   const strengthLabel = !isLogin
     ? activePassword.length >= 21
