@@ -28,7 +28,6 @@ const Auth: React.FC = () => {
     number: /\d/.test(activePassword),
   };
 
-  const strengthCount = [passwordChecks.upper, passwordChecks.lower, passwordChecks.number].filter(Boolean).length;
   const strengthLabel = !isLogin
     ? activePassword.length >= 21
       ? "Character Exceed"
